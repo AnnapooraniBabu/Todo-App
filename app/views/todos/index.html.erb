@@ -59,7 +59,7 @@ li:hover{
 	cursor: pointer;
 }
 .tasklist{
-	margin-left:25%;
+	margin-left:50%;
 	/* margin-top:1%; */
 	
 }
@@ -83,7 +83,7 @@ li:hover{
 			  <%= form.submit "Add Task", class:"Btn" %>
 			<% end %>
 			<% @show_data.each do |record| %>
-			<h2 class = "tasklist"><%=record.task %> &nbsp  &nbsp <%=record.date_task %>
+			<h2 class = "tasklist"><%=record.task %> &nbsp  &nbsp &nbsp <%=record.date_task %>
 			
 			<%=  link_to "Delete", "/todos/#{record.id}", :data => {:confirm => 'Are you sure?'} %> 
 			</h2>
